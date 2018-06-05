@@ -8,9 +8,7 @@ env:
   - JOB=doc
   - JOB=gpu
   - JOB=cpu
-  
-  global:
-  - LANG="en_US.UTF-8"
+
 compiler:
   - gcc
 services:
