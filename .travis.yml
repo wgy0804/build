@@ -5,10 +5,6 @@ dist: trusty
 os:
   - linux
 env:
- global:
-
-  - LANG="en_US.UTF-8"
-
   - PLACE=NVIDIA-GPU
   - PLACE=AMD_GPU
   - PLACE=X86-ONLY
@@ -25,7 +21,7 @@ install:
   #- sudo apt-get install nvidia-cuda-toolkit
 script:
   - cd docker
-  - echo "bash anakin_docker_build_and_run.sh -p ${PLACE} -o ${OS} -m Build"
+  - echo "bash anakin_docker_build_and_run.sh -p ${PLACE} -o ${JOB} -m Build"
 #  - bash anakin_docker_build_and_run.sh -p NVIDIA-GPU -o Ubuntu -m Build
 #branches:
 #  only:
