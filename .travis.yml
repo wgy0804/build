@@ -1,14 +1,35 @@
 language: cpp
-services:
-  - docker
+cache: ccache
+sudo: required
+dist: trusty
 os:
   - linux
-  
+env:
+  global:
+  - LANG="en_US.UTF-8"
+compiler:
+  - gcc
+services:
+  - docker
+
 before_install:
   - sudo apt-get install nvidia-cuda-toolkit
+
+install:
+  - make get-deps
+
 script:
   - cd docker
-  - ls
-  - nvcc --version
- # - chmod +x ./anakin_docker_build_and_run.sh 
-  - ./anakin_docker_build_and_run.sh  -p NVIDIA-GPU -o Ubuntu -m Build
+  - bash anakin_docker_build_and_run.sh -p NVIDIA-GPU -o Centos -m Build
+
+branches:
+  only:
+  - master
+  - developing
+
+notifications:
+  email:
+    recipients:
+    - xukailu@baidu.com
+    on_success: change
+    on_failure: always
