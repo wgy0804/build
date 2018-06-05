@@ -7,5 +7,6 @@ os:
 script:
   - cd docker
   - ls
+  - lspci|grep -i nvidia
  # - chmod +x ./anakin_docker_build_and_run.sh 
-  - ./anakin_docker_build_and_run.sh  -p NVIDIA-GPU -o Ubuntu -m Build
+ # - ./anakin_docker_build_and_run.sh  -p NVIDIA-GPU -o Ubuntu -m Build
