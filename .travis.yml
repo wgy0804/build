@@ -17,7 +17,7 @@ install:
 
 script:
   - cd docker
-  - bash anakin_docker_build_and_run.sh -p NVIDIA-GPU -o Centos -m Build
+  - bash anakin_docker_build_and_run.sh -p NVIDIA-GPU -o Ubuntu -m Build
 
 branches:
   only:
