@@ -5,9 +5,9 @@ dist: trusty
 os:
   - linux
 env:
-  -JOB=doc
-  -JOB=gpu
-  -JOB=cpu
+  - JOB=doc
+  - JOB=gpu
+  - JOB=cpu
   
   global:
   - LANG="en_US.UTF-8"
