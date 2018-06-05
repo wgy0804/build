@@ -12,11 +12,8 @@ compiler:
 services:
   - docker
 
-before_install:
-  - sudo apt-get install nvidia-cuda-toolkit
-
 install:
-  - make get-deps
+  - sudo apt-get install nvidia-cuda-toolkit
 
 script:
   - cd docker
