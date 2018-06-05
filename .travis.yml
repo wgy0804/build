@@ -14,8 +14,8 @@ env:
   - PLACE=X86-ONLY
   - PLACE=ARM
 
-  - OS=Centos
-  - OS=Ubuntu
+  - JOB=Centos
+  - JOB=Ubuntu
 
 compiler:
   - gcc
